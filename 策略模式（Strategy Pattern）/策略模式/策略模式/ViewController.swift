@@ -17,6 +17,9 @@ class ViewController: UIViewController {
         let mallard:Duck = MallardDuck()
         mallard.performQuack()
         mallard.performFly()
+        //模型可以动态的改变飞行行为，如果把行为的实现绑死在鸭子勒种，无法做到这样
+        mallard.flybehavior = FlyNoWay()
+        mallard.performFly()
         
     }
 
